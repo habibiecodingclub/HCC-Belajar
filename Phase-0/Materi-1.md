@@ -39,8 +39,31 @@ ini adalah ilustrasi bagaimana git bekerja
 
 ini adalah beberapa perintah yang ada pada git untuk mengelola proyek kalan 
 
-<img src="./asset/"
+<img src="./asset/gitcitsit.webp">
+
+### Buat akun github
+untuk buat akun github, silahkan menuju ke website <a href="github.com">github</a> lalu tekan signup 
+
+<img src="./asset/signup.png">
+
+setelah mengikuti instruksi pendaftaran, maka akan langsung di arahkan menuju ke dashboard github seperti ini:
+
+<img src="./asset/dashboard.png">
+
 ## Daftar HCC Belajar 
+Sekarang kalian perlu melakukan Fork pada repository ini dan melakukan pull request untuk melacak progress tugas kalian di HCC
+
+Konsep Dasar Fork:
+1. Fork menciptakan salinan lengkap repository asli, termasuk semua file, commit history, dan branches
+2. Repository hasil fork akan muncul di akun github kalian dengan referensi ke repository asli
+3. Kalian memiliki kontrol penuh atas repository hasil fork dan dapat melakukan perubahan tanpa mempengaurhi repository asli
+
+Kegunaan Fork
+1. Berkontribusi ke proyek opern source - fork memungkinkan kalian mengusulkan perubahan melalui pull request
+2. Menggunakan proyek yang ada starting point untuk proyek baru kalian
+3. Bereksperimen dengan kode tanpa mempengaruhi proyek asli 
+4. Menyimpan snapshot dari proyek yang mungkin berubah di masa depan
+
 
 ## VSCode
 
