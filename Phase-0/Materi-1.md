@@ -64,6 +64,30 @@ Kegunaan Fork
 3. Bereksperimen dengan kode tanpa mempengaruhi proyek asli 
 4. Menyimpan snapshot dari proyek yang mungkin berubah di masa depan
 
+### Step by step fork repository Stage 0
+Pertama silahkan menuju ke link repo <a href="https://github.com/habibiecodingclub/HCC-Belajar/tree/master/Phase-0">stage 0</a>
+
+dan dipojok kanan akan muncul tombol fork dan klik tombolnya
+
+<img src="./asset/fork1.png">
+
+setelah menekan create fork, github akan memproses fork repo ke akun github kalian. Hasilnya, kalian akan memiliki repo didalam akun kalian sendiri
+
+Selamat! kalian telah berhasil melakukan fork repository pertama kalian!
+<img src="./asset/fork2.png">
+
+Setelah melakukan fork, kalian bisa: 
+1. Clone repository hasil fork ke komputer/laptop kalian
+2. Membuat perubahan dan melakukan commit ke repo hasil fork kalian 
+3. Push perubahan ke repository fork kalian
+4. Membuat pull request ke repository utama
+
+Langkah selanjutnya, silahkan copy link repository kalian, dan kirim ke channel #stage-0
+
+<img src="./asset/submitrepo.png">
+
+Setelah itu, kita akan melakukan setup untuk code editor menggunakan vscode
+
 
 ## VSCode
 
