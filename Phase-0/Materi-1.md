@@ -88,8 +88,39 @@ Langkah selanjutnya, silahkan copy link repository kalian, dan kirim ke channel 
 
 Setelah itu, kita akan melakukan setup untuk code editor menggunakan vscode
 
-
 ## VSCode
+<img src="./asset/vscode.png">
+Code editor adalah perangkat lunak khusus yang dirancang untuk menulis dan mengedit kode program. 
+
+code editor ini memiliki fitur-fitur yang dapat membantu seorang programmer seperti : 
+- Syntax Highlighting 
+- Auto Completion
+- Error Detection Code Formatting
+- File management
+
+Ada banyak opsi code editor yang dapat digunakan tapi akan kita memilih vscode karena:
+- Gratis dan Open Source
+- Ringan tapi powerful
+- Mendukung banyak bahasa pemrograman
+- Memiliki marketplace dengan ribuan dengan extenssion/plugin
+- Terintegrasi dengan Git
+
+VSCode sangat direkomendasikan untuk pemula karena mudah digunakan namun tetap memiliki fitur lengkap untuk pengembangan profesional
+
+untuk mendownload VSCode dalam di download di link <a href="https://code.visualstudio.com/download">berikut</a>
+
+setelah menginstall VSCode, kalian bisa buat folder Stage 0 pertama kalian di folder yang kaian pilih 
+
+<img src="./asset/stage0.png">
+
+setelah membuat, silahkan buka folder kalian, buka vscode melalui folder kalian 
+
+<img src="./asset/open.png">
+
+ada banyak cara membuka folder kalian di vscode, ini adalah salah satunya.
+
+<img src="./asset/vscodestage0.png">
+
 
 ## Node JS 
 
