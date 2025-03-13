@@ -121,11 +121,54 @@ ada banyak cara membuka folder kalian di vscode, ini adalah salah satunya.
 
 <img src="./asset/vscodestage0.png">
 
+setelah menginstall vscode, waktunya menginstall nodeJS dan menulis satu baris legenda
 
 ## Node JS 
+Katanya belajar JS kok tiba tiba ada NodeJS ? 
+
+Javascript sendiri adalah bahasa pemrograman yang awalnya diciptakan untuk membuat website menjadi interaktif dan HANYA ditujukan untuk berjalan di browser. Javascript memungkingkan programmer untuk membuat fitur-fitur seperti validasi form, animasi, update konten secara dinamis, dan interaksi pengguna di halamaan web. Bahasa ini menjadi sangat populer karena kemudahannya untuk dipelajari dan kemampuannya dalam memanipulasi HTML dan CSS.
+
+NodeJS sendiri adalah runtiem environment yang memungkinkan javascript untuk berjalan di server (di luar browser). Dengan NodeJS, javascript yang awalnya hanya bisa di gunakan untuk frontend, kini bisa digunakan di backend, memungkinkan pengembangan aplikasi javascript jadi lebih bervariatif. NodeJS sangat efisien dalam menangani banyak koneksi secara bersamaan dan cocok untuk membuat aplikasi real-time seperti chat, streaming atau API.
+
+<img src="./asset/nodejs.jpg">
+
+jadi NodeJS ini salah satu tools runtime javasccript, agar kita bisa menjalankan kode javascript di sisi server. 
 
 ## Instalasi NodeJS
+okey, setelah yapping mengenai NodeJS waktunya kita install.
+
+silahkan menuju ke website dari <a href="https://nodejs.org/en/download">NodeJS</a>
+
+silahkan install dan ikuti langkah langkahnya, setelah menginstall jangan lupa untuk mengecek sekali lagi dengan command pada terminal/cmd kalian
+
+```
+node -v 
+```
+
+<img src="./asset/v.png">
 
 ## Halo Dunia 
+setelah semua nya di setup, waktunya mengkodingkan!
 
-## Pengumpulan Tugas
+pertama kita harus buat file js yang baru dan beri nama halodunia.js
+
+<img src="./asset/halo.png">
+
+kemudian buka filenya, dan tuliskan 
+
+```
+console.log("halo dunia!!!")
+```
+
+lalu jalankan perintah node (filekalian.js) 
+
+```
+node halodunia.js
+```
+
+pada terminal vscode, dan VOILA! hello world kalian telah keluar!
+
+<img src="./asset/halodunia.png">
+
+
+Link Video Materi : On Process
