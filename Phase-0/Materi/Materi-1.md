@@ -13,9 +13,9 @@ kok belajar js? mau buat web kah ?
 
 ## Prerequisites / Persiapan Alat dan Bahan
 - <a href="https://git-scm.com/downloads">Download Git</a>  
-- <a href="">Daftar Github</a>
-- <a href="">Download VSCode </a>
-- <a href="">Download NodeJS </a>
+- <a href="https://github.com/">Daftar Github</a>
+- <a href="https://code.visualstudio.com/download">Download VSCode </a>
+- <a href="https://nodejs.org/en/download">Download NodeJS </a>
 
 ## Apa itu Git dan Github ? 
 Git adalah Sistem Kontrol Pemversian atau Version Control System yang mendeteksi setiap perubahan yang terjadi pada sebuah file dan akan disimpan pada sebuah node atau sebuah snapshot. 
@@ -171,4 +171,4 @@ pada terminal vscode, dan VOILA! hello world kalian telah keluar!
 <img src="./asset/halodunia.png">
 
 
-Link Video Materi : On Process
+Link Video Materi : <a href="https://drive.google.com/drive/folders/1U1lAwTCti3otPZ_8aCxIL6KQQtZur1aA?usp=sharing">disini </a> 
