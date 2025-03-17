@@ -320,4 +320,290 @@ console.log(nama.length) // 12
 console.log(nama[nama.length - 12])  // o
 ```
 
-Javascript menyediakan berbagai method untuk memani
+Javascript menyediakan berbagai method untuk melakukan manipulasi string: 
+
+```javascript
+let kalimat = "Belajar Bersama HCC"
+
+// mengambil substring
+console.log(kalimat.substring(0,7)) // "Belajar"
+console.log(kalimat.toUpperCase()) // "BELAJAR JAVASCRIPT"
+console.log(kalimat.toLowerCase()) // "belajar javascript"
+```
+
+Kita juga bisa menggunakan template literals (dengan backtick) untuk membuat string yang lebih kompleks
+
+```javascript
+let nama = "syawal" 
+let umur = 25
+
+// template literal memungkinkan ekspansi variabel dan multiple line 
+
+let profil = `Nama: ${nama}
+Umur: ${umur} tahun`
+
+console.log(profil)
+// Nama: syawal 
+// Umur: 25 tahun
+
+```
+
+dalam pemrosesan string, sering kali kita perlu melakukan iterasi untuk memeriksa atau memanipulasi setiap karakter
+
+```javascript
+let kata = "Indonesia"
+
+// menghitung jumlah vokal
+let jumlahVokal = 0
+
+for(let i = 0; i < kata.length; i++){
+    if("aiueoAIUEO".includes(kata[i])){
+        jumlahVokal++;
+    }
+}
+console.log(`Jumlah Vokal: ${jumlahVokal}`) // 5
+```
+
+Penting untuk diingat bahwa meskipun kita bisa mengakses karakter indiidual dalam string menggunakan index, kita tidak bisa mengubahnya secara langsung. Jika kita perlu mengubah string, kita harus membuat string baru dengan perubahan yang diinginkan. Ini adalah salah satu aspek fundamental dari sifat immutable string di javascript
+
+# Numbers (operator)
+Di javascript, tipe data number mencakup semua jenis angka, baik itu bilangan bulat (integer) maupun bilangan desimal (floating-point). Javascript menggunakan format 64-bit double-precision floating-point untuk menyimpan nilai numerik. Ini berarti kita tidak perlu mendeklarasikan tipe khusus untuk bilangan bulat atau desimal seperti di beberapa bahasa pemrograman lain
+
+```javascript
+let bilBulat = 42 // integer
+let bilDesimal = 3.14 // floating-point
+let negatif = -17 // bilangan negatif
+let eksponensial = 2e5 // 200000 (notasi eksponensial)
+```
+
+javascript menyediakan beberapa operator aritmatika dasar untuk melakukan perhitungan matematika. Operator-operator ini sangat mirip dengna matematika yang kita pelajari sehar-hari.
+
+```javascript
+// operator aritmatika dasar
+
+let a =10
+let b = 3
+console.log(a + b) // penjumlahan 
+console.log(a - b) // pengurangan
+console.log(a * b) // perkalian
+console.log(a / b) // pembagian
+console.log(a % b) // modulus/sisa pembagian
+console.log(a ** b) // pangkat
+```
+
+javascript juga memiliki operator increment dan decremenet yang sangat berguna untuk menambah atau mengurangi nilai sebesar 1:
+
+```javascript
+let counter = 5
+
+// increment (menambah 1)
+counter++
+console.log(counter) // 6
+
+// decrement (mengurangi 1)
+counter--
+console.log(counter)
+```
+
+untuk operasi yang lebih kompleks, javacript menyediakan object math yang memiliki banyak method matematika berguna:
+
+```javascript
+// menggunakan math object
+console.log(Math.round(3.7)) // 4, pembulatan terdekat
+console.log(Math.floor(3.7)) // 3, pembulatan ke bawah
+console.log(Math.ceil(3.2)) // pembulatan ke atas
+console.log(Math.abs(-5)) // 5, nilai absolute
+console.log(Math.sqrt(16)) // 4, akar kuadrat
+console.log(Math.min(2,5,1)) // 1, nilai terkecil
+console.log(Math.max(2,5,1)) // 5, nilai terbesar
+```
+
+Penting untuk memahami bahwa javascript memiliki beberapa nilai khusus untuk number:
+
+```javascript
+// Nilai khusus
+console.log(Infinity) // representasi tak hingga
+console.log(-Infinity) // negatif tak hingga
+console.log(NaN) // Not a number (hasil operasi yang tidak valid)
+
+// contoh yang menghasilkan nilai NaN
+console.log(0/0) // NaN
+console.log(parseInt("Halo")) // NaN
+
+```
+
+untuk mengkonversi string menjadi number, javascript menyediakan beberapa method
+
+```javascript
+let stringAngka = "123"
+let desimalString = "3.14"
+
+console.log(Number(stringAngka)) // 123
+console.log(parseInt(stringAngka)) // 123
+console.log(parseFloat(desimalString)) // 3.14
+console.log(+'123') // 123
+```
+
+Ketika kita bekerja dengan perhitungan yang melibatkan unag atau presisi tinggi, perlu diperhatikan bahwa javascript bisa mengalami masalah presisi floating-point
+
+```javascript
+console.log(0.1 + 0.2) // 0.30000000004
+// gunakan toFixed() untuk mengatasi ini
+console.log((0.1 + 0.2).toFixed(2)) // "0.30"
+```
+
+pemahaman yang baik tentang number dan operator-operatornya saangat penting dalam pemroggraman javascript, terutama untuk aplikasi yang melibatkan banyak perhitungan matematika. Kalian akan sering menemukan soal-soal coding di HCC yang menggunakan operator matematika ini jadi harus dilatik semua syntax operatornya 
+
+# Conditional Statements
+Conditional statements adalah struktur kontrol yang memungkina program untuk mengekseskusi kode yang berbeda berdasarkan kondisi tertentu. bayangkan ini seperti pengambilan keputusan dalam kehidupan sehari-hari. Jika kondisi terpenuhi, kita melakukan satu hal, dan jika tidak, kita melakukan hal lain. 
+
+Bentuk paling dasar dari conditional statement adalah pernyataan "if". Ini seperti mengatakan "Jika sesuatu benar, lakukan ini" Misalnya, dalam kode: 
+
+```javascript
+let usia = 18
+if (usia >= 17){
+    console.log("Anda sudah bisa membuat KTP")
+} else{
+    console.log("anda belum bisa membuat KTP")
+}
+```
+Di sini, program memeriksa apakah usia lebih besar atau sama dengan 17. Jika benar, pesan "anda sudah bisa membuat ktp" akan muncul, dan apabila kondisi tidak terpenuhi maka pesan "Anda belum bisaa membuat KTP" akan muncul
+
+untuk situasi yang lebih kompleks, kita bisa menggunakan "else if" untuk memeriksa beberapa kondisi secara berurutan. Ini seperti memiliki serangkaian pertanyaan "Apakah ini benar? jika tidak, apakh itu benar? jika tidak juga, bagaimana dengan yang ini"
+
+```javascript
+let cuaca = "hujan"
+
+if (cuaca == "cerah"){
+    console.log("Segera berangkat")
+} else if (cuaca == "mendung"){
+    console.log("berangkat lah dengan payung untuk jaga jaga!")
+} else if (cuaca == "hujan") {
+    console.log("Tetap di dalam ruangan")
+} else{
+    console.log("cuaca tidak dapat diprediksi")
+}
+```
+
+Javascript juga menyediakan cara singkat untuk menulis kondisi yang lebih sederhana menggunakan operasi ternary. Ini berguna ketika kita hanya perlu memilih antara dua nilai berdasarkan kondisi: 
+
+```javascript
+let umur = 20
+let status = umur >= 18 ? "Dewasa" : "Remaja"
+```
+
+untuk kasus dimana kita perlu membandingkan satu nilai dengan banyak kemungkinan, kita bisa menggunakan pernyataan "switch". Ini seperti memiliki daftar kemungkinan nilai dan apa yang harus dilakukan untuk masing masing nilai: 
+
+```javascript
+let hari = "senin"
+switch (hari) {
+ case "Senin":
+    console.log("Awal minggu")   
+    break;
+ case "Jumat":
+    console.log("Akhir Minggu Kerja")
+    break
+ default:
+    console.log("Hari biasa")
+}
+```
+
+Conditional statements sangat penting dalam pemrograman karena mereka memungkinkan program kita untuk membuat keputusan da nberekasi terahadap berabagai situasi yang berbeda. Tanpa conditional statements, program kita hanya akan menjalankan instruksi yang sama setiap kali, tidak peduli apa yang terjadi. Dengan conditional statements, kita bisa membuat program yang lebih pintar dan responsif terhadap berbagai kondisi dan input yang berbeda.
+
+# Operator Logika
+<img src="./asset/logicgate.png">
+
+operator logika dalam javascript adalah alat yang memungkinkan kita mengevaluasi dan mengkombinasikan beberapa kondisi. 
+
+Operator AND (&&) mengevaluasi apakah kondisi apakah kedua kondisi bernilai benar. ini seperti mengajukan dua pertanyaan dan kedua jawaban harus "ya" agar hasilnya benar
+
+```javascript
+let usia = 25;
+let punyaSIM = true;
+
+// Memeriksa apakah seseorang boleh mengemudi
+if (usia >= 17 && punyaSIM) {
+    console.log("Anda boleh mengemudi");
+} else {
+    console.log("Anda belum boleh mengemudi");
+}
+
+// AND juga bisa digunakan untuk lebih dari dua kondisi
+let saldo = 1000000;
+let verifikasi = true;
+let limitHarian = false;
+
+if (saldo >= 500000 && verifikasi && !limitHarian) {
+    console.log("Transaksi dapat diproses");
+}
+
+```
+Operator OR (||) memeriksa apakah setidaknya satu kondisi bernilai benar. Ini seperti memberikan beberapa opsi, dan jika salah satu terpenuhi, hasilnya benar. 
+
+```javascript
+let metodePembayaran = "transfer";
+
+// Memeriksa metode pembayaran yang valid
+if (metodePembayaran === "transfer" || metodePembayaran === "kartu kredit" || metodePembayaran === "e-wallet") {
+    console.log("Metode pembayaran diterima");
+}
+
+// OR berguna untuk nilai default
+let namaPengguna = "";
+let displayName = namaPengguna || "Tamu"; // Jika namaPengguna kosong, gunakan "Tamu"
+```
+
+Operator NOT (!) membalikkan nilai boolean. Ini seperti mengubah "ya" menjadi "tidak" atau sebaliknya:
+
+```javascript
+let sistemMaintenance = false;
+
+// Memeriksa apakah sistem bisa diakses
+if (!sistemMaintenance) {
+    console.log("Sistem dapat diakses");
+}
+
+// NOT sering digunakan untuk memeriksa nilai yang tidak ada
+let data = null;
+if (!data) {
+    console.log("Data tidak tersedia");
+}
+```
+
+operator logika bisa dikombinasikan untuk membuat kondisi yang lebih kompleks. Penting untuk memahami urutan evaluasinya:
+
+```javascript
+let cuaca = "cerah";
+let waktu = "pagi";
+let akhirPekan = true;
+
+// Mengkombinasikan beberapa kondisi
+if ((cuaca === "cerah" || cuaca === "berawan") && (waktu === "pagi" && akhirPekan)) {
+    console.log("Waktu yang tepat untuk jogging!");
+}
+
+```
+javascript juga memiliki konsep "short-circuit evaluation" yang openting untuk dipahami 
+
+```javascript
+// AND menghentikan evaluasi saat menemukan nilai false
+console.log(false && console.log("Tidak akan dicetak")); // false
+
+// OR menghentikan evaluasi saat menemukan nilai true
+console.log(true || console.log("Tidak akan dicetak")); // true
+
+// Ini sering digunakan untuk pengecekan nilai null/undefined
+let user = {
+    nama: "Budi",
+    settings: null
+};
+
+// Hanya mengakses preferences jika settings ada
+let tema = user.settings && user.settings.preferences;
+```
+
+Memahami operator logika dengan baik sangat penting karena mereka adalah fondasi untuk membuat keputusan dalam program. Mereka memungkinkan kita membuat kondisi yang kompleks namun tetap mudah dibaca dan dipahami.
+
+> Diharapkan agar teman-teman tetap melakukan eksplorasi secara mendalam dan searching yang mendalam, karena materi yang ada disini tidak mencakup semua materi kompleks. 
+
+Video Materi : Soon  
