@@ -191,3 +191,133 @@ function hitungTotal(harga, jumlah){
 # Data type 
 tipe data dalam javascript dibagi menjadi dua kategori utama yaitu primitive type dan reference type 
 
+1. Primitive Types (Tipe data primitif)
+Tipe data primitif terdiri dari beberapa jenis data yang menyimpan nilai secara langsung. String digunakan untuk menyimpan teks atau karakter, seperti nama atau alamat, Number mencakup semua jenis angka, baik bilangan bulat maupun desimal, yang dapat digunakan untuk perhitungan matematika. Boolean hanya memiliki dua nilai yaitu true atau false, biasanya digunakan untuk logika dan pengambilan keputusan dalam program. Undefined muncul ketika sebuah variabel dideklarasikan tapi belum diberi nilai, sementara Null adalah nilai kosong yang sengaja diberikan. Symbol adalah tipe data yang menghasilkan nilai unik dan tidak dapat diubah
+
+```javascript
+// String - untuk teks
+let nama = "HCC";
+let pesan = "Halo";
+
+// Number - untuk angka (bulat dan desimal)
+let umur = 25
+let tinggi = 1.75
+
+// Boolean - benar/salah
+let aktif = true
+let menikah = false
+
+// Undefined - variabel yang belum diberi nilai 
+
+let alamat;
+
+// Null - Nilai kosong yang disengaja 
+let dataSiswa = null
+
+// Symbol - nilai unik dan immutable 
+const id = Symbol('id')
+```
+
+2. Reference Types (Tipe Data Referensi)
+
+Reference types merupakan tipe data yang lebih kompleks dan menyimpan referensi ke lokasi memori dimana data sebenarnya disimpan. Array adalah tipe data yang dapat menyimpan kumpulan nilai dalam satu variabel, dimana setiap nilai memiliki index numerik yang dimulai dari 0. Object adalah struktur data yang dapat menyimpan pasangan key-value, memungkinkan penyimpanan data yang lebih terstruktur dengan properti yang dapat diakses menggunakan nama propertinya. Function juga termasuk dalam reference type, merupakan blok kode yang dapat dipanggil dan dieksekusi saat dibutuhkan.
+
+```javascript
+// Array = kumpulan data terurut 
+let buah = ['apel', 'jeruk', 'mangga']
+
+// object - kumpulan property dan value
+let siswa = {
+    nama: "budi",
+    umur: 25,
+    aktif: true
+}
+
+// Function - blok kode yang bisa dipanggil
+function sapaan(nama){
+    return `Halo ${nama}!`
+}
+```
+
+Karakteristik penting: Ini adalah beberapa cara untuk mengetahui tipe data javascript, dan cara mengolah, mengkonversi dari tipe data A ke tipe data lainnya. 
+
+1. Type Checking
+```javascript
+// Menggunakan typeof
+console.log(typeof "budi") // string
+console.log(typeof 25) // number
+console.log(typeof true) // boolean
+console.log(typeof undefined) // undefined
+console.log(typeof null) //object (bug/quirk js)
+console.log(typeof []) // object
+console.log(typeof {}) // object
+console.log(typeof function()) // function 
+```
+
+2. Type conversion 
+```javascript
+// String ke number
+let angka = Number("123") // 123
+let text = String(123) // "123"
+
+// Ke Boolean
+let bool = Boolean(1) // True
+let bool2 = Boolean("") // false
+
+// Automatic conversion
+let hasil = "5" + 2 // "52" (string)
+let hasil2 = "5" - 2 // 3 (number)
+```
+
+3. Contoh best practice
+```javascript 
+let produk = {
+    nama: "Laptop",
+    harga: 1500000,
+    stok: 5,
+    Spesifikasi: ["i7", "16GB Ram"],
+    tersedia: true,
+    getInfo: function(){
+
+        return `${this.nama} - Rp${this.harga}`
+    }
+
+if (produk.stok > 0 && produk.tersedia){
+    console.log(produk.getInfo())
+    console.log("Spesifikasi: ", produk.spesifikasi.join(", "))
+}
+}
+```
+
+Poin-point penting untuk diingat: 
+- Javascript adalah bahasa yang dynamic typing
+- Primitive types disimpan berdasarkan nilai
+- Reference types disimpan berdasarkan referensi ke memori
+- Type conversion bisa terjadi secara otomatis
+- Selalu perhatikan tipe data saat melakukan operasi untuk menghindari bug.
+
+# Strings Type (Detailed)
+String dalam javascript memliki beberapa karakteristik ynag perlu dipahami. Pertama, string bersifat immutable, yang berarti setelah string dibuat, nilainya tidak dapat diubah. Ketika kita melakukan operasi pada string, sebenarnya kita membaut string baru, bukan mengubah string aslinya. 
+
+Setiap karakter dalam string memiliki posisi numerik yang disebut index, dimulai dari 0. Misalnya dalam string "Hello", "H" berada di index 0, "e" di index 1, dan seterusnya.
+
+```javascript
+let teks = "Halo"
+console.log(teks[0]) // H
+console.log(teks[1]) // a
+console.log(teks[3]) // 0
+
+// Mencoba mengubah karakter pada string tidak akan berhasil karena sifatnya immutable
+teks[0] = "J" // tidak akan berubah
+console.log(teks) // Halo
+```
+
+String juga memiliki properti length yang menunjukkan panjang string tersebut. Ini sangat berguna untuk melakukan iterasi atau pemeriksaan string:
+
+```javascript
+let nama = "Budi Santoso"
+console.log(nama.length) // 12
+console.log(nama[nama.length - 12])  // o
+```
+
+Javascript menyediakan berbagai method untuk memani
