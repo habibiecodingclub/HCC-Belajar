@@ -25,6 +25,30 @@
 //isi algoritma mu disini (AWAS KALO GA DI ISI!!!!)
 
 
-let nama = "ini", peran = "contoh";
+// cupu bang
+let nama = "arham", peran = "";
+
+// jika nama gada
+if (nama == ""){
+	console.log("nama wajib diisi");
+}
+
+if (peran == "Ksatria"){
+	console.log(`Halo Ksatria ${nama} , kamu dapat menyerang dengan senjatamu!`);
+}
+else if (peran == "Tabib"){
+	console.log(`Halo Tabib ${nama} ,  kamu akan membantu temanmu yang terluka`);
+}
+else if (peran == "Penyihir"){
+	console.log(`Halo Penyihir ${nama} , ciptakan keajaiban yang membantu kemenanganmu!`);
+}
+else if (peran == ""){
+	console.log(`kayaknya kamu jadi bot aja ya ${nama}, peran yang kamu pilih ga ada`)
+}
+else {
+	console.log("gak kenals")
+}
+
+
 
 //code disini gunakan console.log untuk outputnya
