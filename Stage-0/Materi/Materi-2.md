@@ -133,4 +133,4 @@ Problem solving, Algoritma-algoritma ini adalah solusi teruji untuk masalah umum
 Dengar memahami algoritma dasar, kalian akan lebih mudah memilih dan mengimplementasikan algoritma-algoritma yang lebih kompleks ini sesuai kebutuhan dalam pengembangan aplikasi kalian. 
 
 ---
-Link video materi : Menyusul
+Link video materi : <a href="https://drive.google.com/file/d/1seEWLvRdtxaZkUNbvQMo5Pulk1xbOLhS/view?usp=drive_link"> Klik Disini </a>
