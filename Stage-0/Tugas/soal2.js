@@ -12,10 +12,53 @@
 //tips gunakan keyword ini di google "conditional switch case javascript"
 //dan mulailah membaca dan mencontek di stackoverflow xixixi
 
-let tanggal = 12; // assign nilai variabel tanggal disini! (dengan angka antara 1 - 31)
-let bulan = "2"; // assign nilai variabel bulan disini! (dengan angka antara 1 - 12)
-let tahun = 2001; // assign nilai variabel tahun disini! (dengan angka antara 1900 - 2200)
+let tanggal = 30; // assign nilai variabel tanggal disini! (dengan angka antara 1 - 31)
+let bulan = "1"; // assign nilai variabel bulan disini! (dengan angka antara 1 - 12)
+let tahun = 2005; // assign nilai variabel tahun disini! (dengan angka antara 1900 - 2200)
 // output yang diharapkan: 
 // console.log("Sekarang adalah tanggal 12 Bulan Februari tahun 2001")
 
 //code switch case kamu disini
+switch (bulan) {
+    case "1":
+        bulan = "Januari";
+        break;
+    case "2":
+        bulan = "Februari";
+        break;
+    case "3":
+        bulan = "Maret";
+        break;
+    case "4":
+        bulan = "April";
+        break;
+    case "5":
+        bulan = "Mei";
+        break;
+    case "6":
+        bulan = "Juni";
+        break;
+    case "7":
+        bulan = "Juli";
+        break;
+    case "8":
+        bulan = "Agustus";
+        break;
+    case "9":
+        bulan = "September";
+        break;
+    case "10":
+        bulan = "Oktober";
+        break;
+    case "11":
+        bulan = "November";
+        break;
+    case "12":
+        bulan = "Desember";
+        break;
+    default:
+        console.log("Bulan tidak valid");
+        break;
+    }
+
+console.log(`Sekarang adalah tanggal ${tanggal} Bulan ${bulan} tahun ${tahun}`);
