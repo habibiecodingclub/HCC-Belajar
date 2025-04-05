@@ -49,3 +49,4 @@ function play(nama, peran) {
 
 console.log("==== Proxytia ====")
 console.log(play(nama, peran));
+
